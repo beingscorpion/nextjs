@@ -45,7 +45,7 @@ export async function POST() {
             product_data: {
               name: "T-Shirt",
             },
-            unit_amount: 49 * 100, // $20 (in cents)
+            unit_amount: 49 * 100, 
           },
           quantity: 1,
         },
