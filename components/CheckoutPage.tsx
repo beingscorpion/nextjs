@@ -98,27 +98,27 @@
 // export default CheckoutPage;
 
 
-// "use client";
+"use client";
 
-// export default function CheckoutPage() {
-//   const handleCheckout = async () => {
-//     const res = await fetch("/api/create-payment-intent", {
-//       method: "POST",
-//     });
+export default function CheckoutPage() {
+  const handleCheckout = async () => {
+    const res = await fetch("/api/create-payment-intent", {
+      method: "POST",
+    });
 
-//     const { url } = await res.json();
-//     window.location.href = url; // Redirects to Stripe Checkout page
-//   };
+    const { url } = await res.json();
+    window.location.href = url; // Redirects to Stripe Checkout page
+  };
 
-//   return (
-//     <div>
-//       <h1 className="text-xl font-bold">Buy T-Shirt - $20</h1>
-//       <button
-//         onClick={handleCheckout}
-//         className="p-4 bg-black text-white rounded-md mt-4"
-//       >
-//         Checkout
-//       </button>
-//     </div>
-//   );
-// }
+  return (
+    <div>
+      <h1 className="text-xl font-bold">Buy T-Shirt - $20</h1>
+      <button
+        onClick={handleCheckout}
+        className="p-4 bg-black text-white rounded-md mt-4"
+      >
+        Checkout
+      </button>
+    </div>
+  );
+}
